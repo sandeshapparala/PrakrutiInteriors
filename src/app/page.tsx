@@ -4,6 +4,8 @@ import ServicesSection from '@/components/ui/services-section';
 import InteriorExpertiseSection from '@/components/ui/interior-expertise-section';
 import ProjectsSection from '@/components/ui/projects-section';
 import TestimonialsSection from '@/components/ui/testimonials-section';
+import CTASection from '@/components/ui/cta-section';
+import Footer from '@/components/ui/footer';
 
 export default function Home() {
   return (
@@ -26,9 +28,11 @@ export default function Home() {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
+      {/* CTA Section */}
+      <CTASection />
 
-
-
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

@@ -77,14 +77,13 @@ export default function HeroSection() {
           >
             {/* Premium Badge */}
             <motion.div
-              className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/80 backdrop-blur-sm border border-primary/10 rounded-full shadow-sm"
+              className="inline-flex items-center gap-3 px-5 py-2.5 bg-transparent"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
               <span className="text-primary text-sm font-medium tracking-wide">
-                Eco-Friendly Design Studio
+                {/*Eco-Friendly Design Studio*/}
               </span>
             </motion.div>
 
