@@ -1,0 +1,8 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="600" height="400" fill="#F3F4F6"/>
+<rect x="200" y="100" width="200" height="120" rx="8" fill="#E5E7EB"/>
+<circle cx="240" cy="140" r="12" fill="#9CA3AF"/>
+<path d="M220 180L240 160L260 180L280 160L320 180H220Z" fill="#9CA3AF"/>
+<text x="300" y="250" text-anchor="middle" fill="#6B7280" font-family="system-ui" font-size="16">Interior Design Project</text>
+<text x="300" y="280" text-anchor="middle" fill="#9CA3AF" font-family="system-ui" font-size="14">Image Coming Soon</text>
+</svg>

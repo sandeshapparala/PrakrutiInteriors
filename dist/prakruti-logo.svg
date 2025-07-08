@@ -1,0 +1,25 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Decorative leaf/flame element -->
+  <path d="M15 20 C25 10, 45 10, 55 25 C50 35, 45 45, 35 50 C30 45, 25 40, 20 35 C15 30, 10 25, 15 20" fill="#f06a00"/>
+  <path d="M25 30 C35 25, 50 25, 55 35 C52 42, 48 48, 42 52 C38 48, 35 43, 32 38 C28 33, 25 30, 25 30" fill="#f06a00" opacity="0.8"/>
+  <path d="M30 40 C38 38, 48 38, 52 45 C50 50, 47 54, 43 56 C40 53, 38 49, 36 45 C33 42, 30 40, 30 40" fill="#f06a00" opacity="0.6"/>
+  
+  <!-- Curved decorative lines -->
+  <path d="M10 60 Q30 50, 50 60 Q45 70, 35 75 Q25 70, 10 60" fill="none" stroke="#f06a00" stroke-width="3"/>
+  <path d="M15 70 Q35 65, 45 75 Q40 80, 30 82 Q20 78, 15 70" fill="none" stroke="#f06a00" stroke-width="2"/>
+  <path d="M20 80 Q35 78, 40 85 Q35 88, 25 88 Q20 85, 20 80" fill="none" stroke="#f06a00" stroke-width="2"/>
+  
+  <!-- Small decorative elements -->
+  <ellipse cx="18" cy="45" rx="3" ry="5" fill="#f06a00" opacity="0.7"/>
+  <ellipse cx="38" cy="35" rx="2" ry="4" fill="#f06a00" opacity="0.5"/>
+  
+  <!-- Main text "Prakruti Interiors" -->
+  <text x="80" y="70" font-family="serif" font-size="42" font-weight="bold" fill="#0f7d32" font-style="italic">
+    Prakruti Interiors
+  </text>
+  
+  <!-- Tagline -->
+  <text x="155" y="95" font-family="serif" font-size="16" font-style="italic" fill="#f06a00">
+    Interior that Reflects your Style
+  </text>
+</svg>
