@@ -133,8 +133,8 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div className="text-muted-foreground">
-                  <p>123 Design Street</p>
-                  <p>Mumbai, Maharashtra 400001</p>
+                  <p>MG Road, near bandar lakulu bus stop</p>
+                  <p>Vijayawada, Andhra Pradesh</p>
                   <p>India</p>
                 </div>
               </div>
@@ -142,16 +142,14 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-muted-foreground">
-                  <p>+91 98765 43210</p>
-                  <p>+91 98765 43211</p>
+                  <p>+91 88861 48866</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-muted-foreground">
-                  <p>hello@prakrutiinteriors.com</p>
-                  <p>info@prakrutiinteriors.com</p>
+                  <p>prakruti.salesteam@gmail.com</p>
                 </div>
               </div>
             </div>
