@@ -6,12 +6,8 @@ import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 
-// Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-// Use hardcoded values for cloud deployment
-const projectId = 'qpervfn7'
-const dataset = 'production' 
-const apiVersion = '2025-07-07'
-
+// Import constants from the isolated constants file
+import { projectId, dataset, apiVersion } from './src/sanity/env'
 import {schema} from './src/sanity/schemaTypes'
 import {structure} from './src/sanity/structure'
 

@@ -23,6 +23,21 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    esmExternals: 'loose',
+  },
+  webpack: (config, { isServer }) => {
+    // Handle framer-motion and other ES module issues
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      }
+    }
+    
+    return config
+  },
+  transpilePackages: ['@sanity/ui', '@sanity/vision', 'sanity'],
 };
 
 export default nextConfig;
