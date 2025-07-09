@@ -8,9 +8,9 @@ import Navbar from '@/components/ui/navbar'
 import Footer from '@/components/ui/footer'
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 // Generate static params for all projects
@@ -24,7 +24,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for each project
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const project = await getProjectBySlug(params.slug)
+  const { slug } = await params
+  const project = await getProjectBySlug(slug)
   
   if (!project) {
     return {
@@ -59,7 +60,8 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const project = await getProjectBySlug(params.slug)
+  const { slug } = await params
+  const project = await getProjectBySlug(slug)
   
   if (!project) {
     notFound()
