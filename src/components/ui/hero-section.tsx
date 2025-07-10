@@ -4,8 +4,10 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Play, ArrowRight, Star } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function HeroSection() {
+  const router = useRouter();
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -50]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0.9]);
@@ -124,13 +126,13 @@ export default function HeroSection() {
             >
               {/* Portfolio Button */}
               <motion.button
-                className="group relative bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-base shadow-lg shadow-primary/25 transition-all duration-300 flex items-center gap-3 justify-center"
+                className="group bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-base shadow-lg shadow-primary/25 transition-all duration-300 flex items-center gap-3 justify-center"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => router.push('/projects')}
               >
                 <span>PORTFOLIO</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
               </motion.button>
 
               {/* Watch Tour Button */}
@@ -138,6 +140,7 @@ export default function HeroSection() {
                 className="group flex items-center gap-4 px-6 py-4 text-gray-700 hover:text-primary transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => window.open('https://maps.app.goo.gl/cGhVTF8eH8K43ivKA?g_st=ac', '_blank')}
               >
                 <div className="relative">
                   <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
@@ -247,7 +250,7 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05, rotate: -1 }}
               >
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">500+</div>
+                  <div className="text-2xl font-bold text-primary">1000+</div>
                   <div className="text-xs text-gray-600 font-medium">Projects</div>
                 </div>
               </motion.div>

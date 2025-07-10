@@ -1,64 +1,107 @@
 'use client';
 
 import { TestimonialsWithMarquee } from "@/components/ui/testimonials-with-marquee"
+import { getTestimonials, type Testimonial } from "@/sanity/lib/testimonials"
+import { useEffect, useState } from "react"
 
-const testimonials = [
+// Default avatar for all testimonials
+const DEFAULT_AVATAR = "data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100' height='100' fill='%23f3f4f6'/%3e%3cpath d='M50 55c13.8 0 25-11.2 25-25S63.8 5 50 5 25 16.2 25 30s11.2 25 25 25zm0 10c-16.67 0-50 8.33-50 25v5h100v-5c0-16.67-33.33-25-50-25z' fill='%239ca3af'/%3e%3c/svg%3e"
+
+// Fallback testimonials in case Sanity is unavailable
+const fallbackTestimonials = [
   {
     author: {
-      name: "Priya Sharma",
-      handle: "Residential Client",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+      name: "Aditya Unnam",
+      handle: "Living Room Redesign",
+      avatar: DEFAULT_AVATAR
     },
-    text: "Prakruti Interiors transformed our home into a sanctuary. Their attention to sustainable materials and spiritual design created the perfect balance of luxury and mindfulness we were seeking."
+    text: "I had the pleasure of working with this team for my living room redesign. They listened carefully to my ideas and combined them with their own expertise. The result? A stunning, functional space with beautiful attention to detail. Worth every penny!"
   },
   {
     author: {
-      name: "Rajesh Kumar",
-      handle: "CEO, TechFlow Solutions",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      name: "Karanam Shivani",
+      handle: "Living Room Design",
+      avatar: DEFAULT_AVATAR
     },
-    text: "The biophilic office design revolutionized our workplace culture. Productivity increased by 30% and employee satisfaction soared. Prakruti truly understands the connection between environment and wellbeing."
+    text: "I recently got my living room designed and I'm so happy with the results! The project was completed on time and the team was extremely professional and easy to work with. Highly recommend!"
   },
   {
     author: {
-      name: "Dr. Vikram Patel",
-      handle: "Wellness Center Director",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      name: "Mandali Phani",
+      handle: "Interior Finishing",
+      avatar: DEFAULT_AVATAR
     },
-    text: "The zen-inspired design of our wellness center creates an immediate sense of calm for our clients. Every element promotes healing and tranquility."
+    text: "They delivered a high-gloss acrylic finish with hand-finished seamless edges—better than factory-made work. I'm fully satisfied with the craftsmanship and detail."
   },
   {
     author: {
-      name: "Anita Desai",
-      handle: "Boutique Owner",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      name: "Venu Murala",
+      handle: "Apartment Interiors",
+      avatar: DEFAULT_AVATAR
     },
-    text: "Their heritage restoration expertise brought new life to our 100-year-old property while preserving its cultural essence. The result is breathtaking!"
+    text: "Getting our apartment interiors done by Prakruti Interiors was one of the best decisions. They offer top-quality materials and designs at prices unmatched in AP and Telangana."
   },
   {
     author: {
-      name: "Meera Reddy",
-      handle: "Resort Owner",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+      name: "Dontam Vasanthi",
+      handle: "Complete Interior",
+      avatar: DEFAULT_AVATAR
     },
-    text: "Our mountain retreat has become a destination in itself. Guests specifically mention the harmonious design that connects them with nature. Bookings increased 40%!"
-  },
-  {
-    author: {
-      name: "Arjun Singh",
-      handle: "Private Client",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
-    },
-    text: "The smart home integration with sustainable design is incredible. Our penthouse is not just beautiful, it's intelligently designed for modern living."
+    text: "I'm delighted with the results. From consultation to final execution, their professionalism, creativity, and commitment were top-notch. Highly satisfied!"
   }
 ]
 
 export default function TestimonialsSection() {
+  const [testimonials, setTestimonials] = useState(fallbackTestimonials)
+
+  useEffect(() => {
+    async function fetchTestimonials() {
+      try {
+        const sanityTestimonials = await getTestimonials()
+        
+        if (sanityTestimonials.length > 0) {
+          // Transform Sanity data to component format
+          const transformedTestimonials = sanityTestimonials.map((testimonial: Testimonial) => ({
+            author: {
+              name: testimonial.clientName,
+              handle: testimonial.projectType,
+              avatar: DEFAULT_AVATAR
+            },
+            text: testimonial.testimonialText
+          }))
+          
+          setTestimonials(transformedTestimonials)
+        }
+      } catch (error) {
+        console.error('Error loading testimonials:', error)
+        // Fallback testimonials are already set
+      }
+    }
+
+    fetchTestimonials()
+  }, [])
+
+  // Calculate speed based on number of testimonials
+  // Formula: Base speed + (number of testimonials * speed per testimonial)
+  // This ensures consistent reading time per testimonial regardless of total count
+  const calculateSpeed = (count: number) => {
+    const baseSpeed = 15 // Minimum speed for smooth animation
+    const speedPerTestimonial = 4 // Additional seconds per testimonial
+    const calculatedSpeed = baseSpeed + (count * speedPerTestimonial)
+    
+    // Cap the maximum speed to prevent it from being too slow
+    const maxSpeed = 60
+    return Math.min(calculatedSpeed, maxSpeed)
+  }
+
+  const animationSpeed = calculateSpeed(testimonials.length)
+
   return (
     <TestimonialsWithMarquee
       title="Loved by Clients Across India"
       description="Join hundreds of satisfied clients who have transformed their spaces with our sustainable and spiritual interior design approach"
       testimonials={testimonials}
+      speed={animationSpeed} // Dynamic speed based on testimonial count
       className="bg-gradient-to-b from-background to-muted/20"
     />
   )

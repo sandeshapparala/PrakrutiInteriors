@@ -133,7 +133,7 @@ export default function WhoWeAreSection() {
             >
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-primary">500+</div>
+                  <div className="text-2xl font-bold text-primary">1000+</div>
                   <div className="text-xs text-gray-600">Projects</div>
                 </div>
                 <div>
@@ -226,7 +226,6 @@ export default function WhoWeAreSection() {
                 >
                   <span>About Us</span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                 </motion.button>
               </Link>
             </motion.div>

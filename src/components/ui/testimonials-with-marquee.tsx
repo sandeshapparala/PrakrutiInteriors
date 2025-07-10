@@ -11,13 +11,15 @@ interface TestimonialsSectionProps {
     href?: string
   }>
   className?: string
+  speed?: number // Animation speed in seconds (default: 25)
 }
 
 export function TestimonialsWithMarquee({ 
   title,
   description,
   testimonials,
-  className 
+  className,
+  speed = 25 // Default speed: 25 seconds for full cycle
 }: TestimonialsSectionProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -28,14 +30,14 @@ export function TestimonialsWithMarquee({
     // Add the animation
     scrollElement.style.animation = 'none';
     void scrollElement.offsetHeight; // Trigger reflow
-    scrollElement.style.animation = 'marqueeScroll 25s linear infinite';
+    scrollElement.style.animation = `marqueeScroll ${speed}s linear infinite`;
 
     return () => {
       if (scrollElement) {
         scrollElement.style.animation = 'none';
       }
     };
-  }, [testimonials]);
+  }, [testimonials, speed]);
 
   // Create duplicate testimonials for seamless loop
   const allTestimonials = [...testimonials, ...testimonials];
