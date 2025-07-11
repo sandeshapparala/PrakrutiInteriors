@@ -13,7 +13,7 @@ export default function ServicesSection() {
       tagline: "Aesthetic, spacious, & cozy living",
       description: "Transform your living space into a harmonious blend of comfort and style with eco-friendly materials.",
       icon: Sofa,
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80",
       features: ["Space Optimization", "Natural Materials", "Aesthetic Balance"],
       color: "from-primary to-primary/80"
     },
@@ -23,7 +23,7 @@ export default function ServicesSection() {
       tagline: "Smart, space-saving kitchens",
       description: "Innovative kitchen designs that maximize functionality while maintaining beautiful aesthetics.",
       icon: ChefHat,
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1549187774-b4e9b0445b06?auto=format&fit=crop&w=600&q=80",
       features: ["Smart Storage", "Modern Appliances", "Efficient Layout"],
       color: "from-accent to-accent/80"
     },
@@ -33,7 +33,7 @@ export default function ServicesSection() {
       tagline: "Elegant, serene personal spaces",
       description: "Create peaceful sanctuaries that promote rest and reflect your personal style.",
       icon: Bed,
-      image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1505691723518-41cb65a29a94?auto=format&fit=crop&w=600&q=80",
       features: ["Peaceful Ambiance", "Custom Storage", "Comfort Design"],
       color: "from-primary to-primary/80"
     },
@@ -43,7 +43,7 @@ export default function ServicesSection() {
       tagline: "Eco-friendly & customized designs",
       description: "Handcrafted furniture pieces using sustainable fibre wood and spiritual design principles.",
       icon: Sparkles,
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80",
       features: ["Sustainable Materials", "Custom Designs", "Artisan Crafted"],
       color: "from-accent to-accent/80"
     },
@@ -53,7 +53,7 @@ export default function ServicesSection() {
       tagline: "Functional + brand-aligned layouts",
       description: "Professional environments that boost productivity while reflecting your company's values.",
       icon: Building,
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=600&q=80",
       features: ["Productivity Focus", "Brand Identity", "Flexible Layouts"],
       color: "from-primary to-primary/80"
     },
@@ -63,7 +63,7 @@ export default function ServicesSection() {
       tagline: "Tailored interior guidance",
       description: "Personalized consultation to bring your unique vision to life with expert guidance.",
       icon: Users,
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=80",
       features: ["Personalized Plans", "Expert Guidance", "Budget Optimization"],
       color: "from-accent to-accent/80"
     }

@@ -79,7 +79,7 @@ export default function WhoWeAreSection() {
               {/* Main Large Image */}
               <div className="col-span-2 relative rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1000&q=80"
                   alt="Eco-friendly living room with natural materials"
                   fill
                   className="object-cover"
@@ -95,7 +95,7 @@ export default function WhoWeAreSection() {
               {/* Small Images Row */}
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                  src="https://images.unsplash.com/photo-1549187774-b4e9b0445b06?auto=format&fit=crop&w=500&q=80"
                   alt="Modern kitchen design"
                   fill
                   className="object-cover"
@@ -109,7 +109,7 @@ export default function WhoWeAreSection() {
               
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                  src="https://images.unsplash.com/photo-1505691723518-41cb65a29a94?auto=format&fit=crop&w=500&q=80"
                   alt="Natural zen bedroom"
                   fill
                   className="object-cover"

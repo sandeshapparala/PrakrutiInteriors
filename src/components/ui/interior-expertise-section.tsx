@@ -143,7 +143,7 @@ export default function InteriorExpertiseSection() {
                 {/* Inner image container */}
                 <div className="relative h-96 w-full overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80"
                     alt="Modern interior workspace with geometric black and white floor pattern"
                     fill
                     className="object-cover"
