@@ -17,31 +17,31 @@ export default function HeroSection() {
     {
       id: 1,
       style: 'Modern Minimalist',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1000&q=80',
       description: 'Clean lines, neutral tones, and clutter-free spaces'
     },
     {
       id: 2,
       style: 'Warm Contemporary',
-      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1549187774-b4e9b0445b06?auto=format&fit=crop&w=1000&q=80',
       description: 'Cozy textures, warm colors, and inviting atmosphere'
     },
     {
       id: 3,
       style: 'Natural Zen',
-      image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1505691723518-41cb65a29a94?auto=format&fit=crop&w=1000&q=80',
       description: 'Organic materials, plants, and peaceful ambiance'
     },
     {
       id: 4,
       style: 'Luxury Classic',
-      image: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=1000&q=80',
       description: 'Rich materials, elegant furniture, and timeless design'
     },
     {
       id: 5,
       style: 'Coastal Breeze',
-      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1000&q=80',
       description: 'Light blues, whites, and airy coastal-inspired elements'
     }
   ];

@@ -12,7 +12,7 @@ export default function CTASection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1549187774-b4e9b0445b06?auto=format&fit=crop&w=1600&q=80"
           alt="Prakruti Interiors Eco Consultation"
           className="w-full h-full object-cover object-center"
         />
