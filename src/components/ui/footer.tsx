@@ -187,24 +187,24 @@ export default function Footer() {
         <div className="container-prakruti py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             
+            {/* Code & Craft Credits */}
+            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+              <Link 
+                href="https://sandesh.io" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors flex items-center gap-2"
+              >
+                <span>Code & Craft by Sandesh</span>
+                <ChevronRight className="w-3 h-3" />
+              </Link>
+            </div>
+
             {/* Copyright */}
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>© 2025 Prakruti Interiors. Made with</span>
               <Heart className="w-4 h-4 text-red-500 fill-current" />
               <span>in India</span>
-            </div>
-
-            {/* Legal Links */}
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <Link href="#" className="hover:text-primary transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:text-primary transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="#" className="hover:text-primary transition-colors">
-                Cookie Policy
-              </Link>
             </div>
 
             {/* Back to Top */}
