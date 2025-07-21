@@ -27,8 +27,8 @@ export default async function Home() {
       {/* Services Section - Now with Sanity images */}
       <ServicesSection homePageData={homePageData} />
 
-      {/* Interior Expertise Section */}
-      <InteriorExpertiseSection />
+      {/* Interior Expertise Section - Now with Sanity images */}
+      <InteriorExpertiseSection homePageData={homePageData} />
 
       {/* Projects Section */}
       <ProjectsSection projects={featuredProjects} />
@@ -36,8 +36,8 @@ export default async function Home() {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
-      {/* CTA Section */}
-      <CTASection />
+      {/* CTA Section - Now with Sanity images */}
+      <CTASection homePageData={homePageData} />
 
       {/* Footer */}
       <Footer />

@@ -3,8 +3,18 @@
 import { motion } from 'framer-motion';
 import { Leaf, CircleDot, Heart } from 'lucide-react';
 import Image from 'next/image';
+import { getOptimizedImageUrl, type HomePageImages } from '@/sanity/lib/homePageImages';
 
-export default function InteriorExpertiseSection() {
+interface InteriorExpertiseSectionProps {
+  homePageData?: HomePageImages | null;
+}
+
+export default function InteriorExpertiseSection({ homePageData }: InteriorExpertiseSectionProps) {
+  // Use Sanity image if available, otherwise fallback
+  const featuredImage = homePageData?.interiorExpertiseSection?.featuredImage 
+    ? getOptimizedImageUrl(homePageData.interiorExpertiseSection.featuredImage, 800, 600)
+    : "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+
   const expertiseStats = [
     { 
       label: "SUSTAINABLE VISION", 
@@ -143,7 +153,7 @@ export default function InteriorExpertiseSection() {
                 {/* Inner image container */}
                 <div className="relative h-96 w-full overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    src={featuredImage}
                     alt="Modern interior workspace with geometric black and white floor pattern"
                     fill
                     className="object-cover"

@@ -5,14 +5,24 @@
 'use client';
 
 import { ArrowUpRight } from 'lucide-react';
+import { getOptimizedImageUrl, type HomePageImages } from '@/sanity/lib/homePageImages';
 
-export default function CTASection() {
+interface CTASectionProps {
+  homePageData?: HomePageImages | null;
+}
+
+export default function CTASection({ homePageData }: CTASectionProps) {
+  // Use Sanity background image if available, otherwise fallback
+  const backgroundImage = homePageData?.ctaSection?.backgroundImage 
+    ? getOptimizedImageUrl(homePageData.ctaSection.backgroundImage, 1600, 800)
+    : "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80";
+
   return (
     <section className="relative w-full overflow-hidden min-h-[580px]">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+          src={backgroundImage}
           alt="Prakruti Interiors Eco Consultation"
           className="w-full h-full object-cover object-center"
         />
