@@ -6,8 +6,12 @@ import ProjectsSection from '@/components/ui/projects-section';
 import TestimonialsSection from '@/components/ui/testimonials-section';
 import CTASection from '@/components/ui/cta-section';
 import Footer from '@/components/ui/footer';
+import { getFeaturedProjects } from '@/sanity/lib/projects';
 
-export default function Home() {
+export default async function Home() {
+  // Fetch featured projects for the homepage
+  const featuredProjects = await getFeaturedProjects();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -23,7 +27,7 @@ export default function Home() {
       <InteriorExpertiseSection />
 
       {/* Projects Section */}
-      <ProjectsSection />
+      <ProjectsSection projects={featuredProjects} />
 
       {/* Testimonials Section */}
       <TestimonialsSection />

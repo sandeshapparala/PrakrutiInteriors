@@ -997,12 +997,12 @@ export default function AboutPage() {
               </motion.a>
               
               <motion.a
-                href="mailto:contact@prakrutiinterios.com"
+                href="mailto:contact@prakrutiinteriors.com"
                 className="flex items-center justify-center gap-3 p-4 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group"
                 whileHover={{ scale: 1.02 }}
               >
                 <Mail className="w-5 h-5 group-hover:scale-110 transition-transform text-primary" />
-                <span className="font-medium">contact@prakrutiinterios.com</span>
+                <span className="font-medium">contact@prakrutiinteriors.com</span>
               </motion.a>
               
               <motion.div

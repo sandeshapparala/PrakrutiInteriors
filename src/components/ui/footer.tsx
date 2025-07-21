@@ -7,7 +7,7 @@ import {
   Mail, 
   Instagram, 
   Facebook, 
-  Twitter, 
+  Youtube, 
   Linkedin,
   ChevronRight,
   Leaf,
@@ -159,14 +159,16 @@ export default function Footer() {
               <h4 className="font-medium text-foreground">Follow Us</h4>
               <div className="flex items-center gap-3">
                 {[
-                  { icon: Instagram, href: '#', color: 'hover:text-pink-500' },
-                  { icon: Facebook, href: '#', color: 'hover:text-blue-600' },
-                  { icon: Twitter, href: '#', color: 'hover:text-blue-400' },
-                  { icon: Linkedin, href: '#', color: 'hover:text-blue-700' }
+                  { icon: Instagram, href: 'https://www.instagram.com/prakrutiinteriors/', color: 'hover:text-pink-500' },
+                  { icon: Facebook, href: 'https://www.facebook.com/prakruti.interiors.9', color: 'hover:text-blue-600' },
+                  { icon: Youtube, href: 'https://www.youtube.com/@prakrutiinteriors9', color: 'hover:text-red-500' },
+                  { icon: Linkedin, href: 'https://www.linkedin.com/in/prakruti-interiors-0b80a8214/', color: 'hover:text-blue-700' }
                 ].map((social, index) => (
                   <motion.a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-10 h-10 rounded-full bg-muted hover:bg-muted/80 flex items-center justify-center text-muted-foreground ${social.color} transition-colors`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
