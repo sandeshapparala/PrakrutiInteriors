@@ -4,9 +4,15 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Home, ChefHat, Bed, Sofa, Building, Users, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getOptimizedImageUrl, type HomePageImages } from '@/sanity/lib/homePageImages';
 
-export default function ServicesSection() {
-  const services = [
+interface ServicesSectionProps {
+  homePageData?: HomePageImages | null;
+}
+
+export default function ServicesSection({ homePageData }: ServicesSectionProps) {
+  // Fallback services data
+  const fallbackServices = [
     {
       id: 1,
       title: "Living Room Design",
@@ -14,8 +20,7 @@ export default function ServicesSection() {
       description: "Transform your living space into a harmonious blend of comfort and style with eco-friendly materials.",
       icon: Sofa,
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      features: ["Space Optimization", "Natural Materials", "Aesthetic Balance"],
-      color: "from-primary to-primary/80"
+      features: ["Space Optimization", "Natural Materials", "Aesthetic Balance"]
     },
     {
       id: 2,
@@ -24,8 +29,7 @@ export default function ServicesSection() {
       description: "Innovative kitchen designs that maximize functionality while maintaining beautiful aesthetics.",
       icon: ChefHat,
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      features: ["Smart Storage", "Modern Appliances", "Efficient Layout"],
-      color: "from-accent to-accent/80"
+      features: ["Smart Storage", "Modern Appliances", "Efficient Layout"]
     },
     {
       id: 3,
@@ -34,8 +38,7 @@ export default function ServicesSection() {
       description: "Create peaceful sanctuaries that promote rest and reflect your personal style.",
       icon: Bed,
       image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      features: ["Peaceful Ambiance", "Custom Storage", "Comfort Design"],
-      color: "from-primary to-primary/80"
+      features: ["Peaceful Ambiance", "Custom Storage", "Comfort Design"]
     },
     {
       id: 4,
@@ -44,8 +47,7 @@ export default function ServicesSection() {
       description: "Handcrafted furniture pieces using sustainable fibre wood and spiritual design principles.",
       icon: Sparkles,
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      features: ["Sustainable Materials", "Custom Designs", "Artisan Crafted"],
-      color: "from-accent to-accent/80"
+      features: ["Sustainable Materials", "Custom Designs", "Artisan Crafted"]
     },
     {
       id: 5,
@@ -54,8 +56,7 @@ export default function ServicesSection() {
       description: "Professional environments that boost productivity while reflecting your company's values.",
       icon: Building,
       image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      features: ["Productivity Focus", "Brand Identity", "Flexible Layouts"],
-      color: "from-primary to-primary/80"
+      features: ["Productivity Focus", "Brand Identity", "Flexible Layouts"]
     },
     {
       id: 6,
@@ -64,10 +65,47 @@ export default function ServicesSection() {
       description: "Personalized consultation to bring your unique vision to life with expert guidance.",
       icon: Users,
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      features: ["Personalized Plans", "Expert Guidance", "Budget Optimization"],
-      color: "from-accent to-accent/80"
+      features: ["Personalized Plans", "Expert Guidance", "Budget Optimization"]
     }
   ];
+
+  // Map service icons to service names for matching with Sanity data
+  const serviceIconMap = {
+    "Living Room": Sofa,
+    "Kitchen": ChefHat,
+    "Bedroom": Bed,
+    "Furniture": Sparkles,
+    "Office": Building,
+    "Consultation": Users,
+    // Alternative service names
+    "Living Room Design": Sofa,
+    "Modular Kitchen": ChefHat,
+    "Bedroom Interiors": Bed,
+    "Furniture & Decor": Sparkles,
+    "Office Spaces": Building,
+    "Custom Design Consult": Users
+  };
+
+  // Use Sanity data if available, otherwise fallback to hardcoded data
+  const services = homePageData?.servicesSection?.services?.length
+    ? homePageData.servicesSection.services
+        .filter(service => service.image && service.serviceName) // Filter out incomplete data
+        .map((service, index) => {
+          const fallbackService = fallbackServices[index] || fallbackServices[0];
+          const serviceName = service.serviceName || 'Custom Service';
+          const icon = serviceIconMap[serviceName as keyof typeof serviceIconMap] || serviceIconMap[serviceName.split(' ')[0] as keyof typeof serviceIconMap] || Sparkles;
+          
+          return {
+            id: index + 1,
+            title: serviceName,
+            tagline: fallbackService.tagline,
+            description: fallbackService.description,
+            icon: icon,
+            image: getOptimizedImageUrl(service.image, 600, 400),
+            features: fallbackService.features
+          };
+        })
+    : fallbackServices;
 
   return (
     <section className="relative section-padding bg-gradient-to-br from-gray-50 via-gray-50/80 to-primary/5 overflow-hidden prakruti-texture">
@@ -172,7 +210,6 @@ export default function ServicesSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-40 group-hover:opacity-60 transition-opacity duration-300`}></div>
               </div>
             </motion.div>
           ))}

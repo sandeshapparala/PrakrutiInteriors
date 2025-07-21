@@ -7,21 +7,25 @@ import TestimonialsSection from '@/components/ui/testimonials-section';
 import CTASection from '@/components/ui/cta-section';
 import Footer from '@/components/ui/footer';
 import { getFeaturedProjects } from '@/sanity/lib/projects';
+import { getHomePageImages } from '@/sanity/lib/homePageImages';
 
 export default async function Home() {
-  // Fetch featured projects for the homepage
-  const featuredProjects = await getFeaturedProjects();
+  // Fetch both featured projects and homepage images
+  const [featuredProjects, homePageData] = await Promise.all([
+    getFeaturedProjects(),
+    getHomePageImages()
+  ]);
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <HeroSection />
+      {/* Hero Section - Now with Sanity images */}
+      <HeroSection homePageData={homePageData} />
 
       {/* Who We Are Section */}
       <WhoWeAreSection />
 
-      {/* Services Section */}
-      <ServicesSection />
+      {/* Services Section - Now with Sanity images */}
+      <ServicesSection homePageData={homePageData} />
 
       {/* Interior Expertise Section */}
       <InteriorExpertiseSection />

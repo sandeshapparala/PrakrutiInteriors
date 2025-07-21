@@ -5,15 +5,20 @@ import { Play, ArrowRight, Star } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { getOptimizedImageUrl, type HomePageImages } from '@/sanity/lib/homePageImages';
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  homePageData?: HomePageImages | null;
+}
+
+export default function HeroSection({ homePageData }: HeroSectionProps) {
   const router = useRouter();
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -50]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0.9]);
 
-  // Interior design variations with real images
-  const interiorDesigns = [
+  // Fallback interior designs if Sanity data isn't available
+  const fallbackDesigns = [
     {
       id: 1,
       style: 'Modern Minimalist',
@@ -45,6 +50,16 @@ export default function HeroSection() {
       description: 'Light blues, whites, and airy coastal-inspired elements'
     }
   ];
+
+  // Use Sanity data if available, otherwise fallback to hardcoded data
+  const interiorDesigns = homePageData?.heroSection?.interiorDesigns?.length 
+    ? homePageData.heroSection.interiorDesigns.map((design, index) => ({
+        id: index + 1,
+        style: design.style || 'Interior Design',
+        image: getOptimizedImageUrl(design.image, 1000, 750),
+        description: `Beautiful ${design.style ? design.style.toLowerCase() : 'interior'} design`
+      }))
+    : fallbackDesigns;
 
   const [currentDesign, setCurrentDesign] = useState(0);
 
