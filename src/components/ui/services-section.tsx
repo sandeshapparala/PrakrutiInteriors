@@ -35,7 +35,7 @@ export default function ServicesSection({ homePageData }: ServicesSectionProps) 
       id: 3,
       title: "Bedroom Interiors",
       tagline: "Elegant, serene personal spaces",
-      description: "Create peaceful sanctuaries that promote rest and reflect your personal style.",
+      description: "Create peaceful sanctuaries that promote rest and reflect your personal style.      ",
       icon: Bed,
       image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       features: ["Peaceful Ambiance", "Custom Storage", "Comfort Design"]
@@ -60,12 +60,12 @@ export default function ServicesSection({ homePageData }: ServicesSectionProps) 
     },
     {
       id: 6,
-      title: "Custom Design Consult",
-      tagline: "Tailored interior guidance",
-      description: "Personalized consultation to bring your unique vision to life with expert guidance.",
-      icon: Users,
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      features: ["Personalized Plans", "Expert Guidance", "Budget Optimization"]
+      title: "Restaurants & Hotels",
+      tagline: "Inviting, functional hospitality spaces",
+      description: "Designing memorable dining and stay experiences with a focus on ambiance, brand identity.",
+      icon: Building,
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      features: ["Ambiance Creation", "Durable Materials", "Brand Experience"]
     }
   ];
 

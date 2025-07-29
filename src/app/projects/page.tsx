@@ -5,8 +5,8 @@ import Navbar from '@/components/ui/navbar'
 import Footer from '@/components/ui/footer'
 
 export const metadata: Metadata = {
-  title: 'Our Interior Design Projects Portfolio - 1000+ Completed Works',
-  description: 'Explore our extensive portfolio of 1000+ interior design projects in Vijayawada & across India. Residential, commercial, and office interiors with eco-friendly fibre wood materials.',
+  title: 'Our Interior Design Projects Portfolio - 300+ Completed Works',
+  description: 'Explore our extensive portfolio of 300+ interior design projects in Vijayawada & across India. Residential, commercial, and office interiors with eco-friendly fibre wood materials.',
   keywords: [
     'interior design portfolio Vijayawada',
     'completed interior projects',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Interior Design Projects Portfolio - Prakruti Interiors',
-    description: 'Browse through 1000+ completed interior design projects featuring eco-friendly materials and innovative design solutions.',
+  description: 'Browse through 300+ completed interior design projects featuring eco-friendly materials and innovative design solutions.',
     type: 'website',
     images: [
       {

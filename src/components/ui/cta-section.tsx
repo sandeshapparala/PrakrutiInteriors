@@ -39,9 +39,12 @@ export default function CTASection({ homePageData }: CTASectionProps) {
           <p className="mt-6 text-lg text-gray-100 max-w-lg leading-relaxed">
             Our team at Prakruti Interiors is ready to bring your vision to life. Whether it's a soulful living space or a mindful workspace — let's make it happen, sustainably.
           </p>
-          <button className="mt-8 inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl">
+          <a
+            href="/contact"
+            className="mt-8 inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
             Contact Us <ArrowUpRight className="w-5 h-5" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

@@ -265,7 +265,7 @@ export default function HeroSection({ homePageData }: HeroSectionProps) {
                 whileHover={{ scale: 1.05, rotate: -1 }}
               >
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">1000+</div>
+                  <div className="text-2xl font-bold text-primary">300+</div>
                   <div className="text-xs text-gray-600 font-medium">Projects</div>
                 </div>
               </motion.div>

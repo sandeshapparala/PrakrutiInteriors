@@ -101,12 +101,12 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-foreground">Our Services</h3>
             <nav className="space-y-3">
               {[
-                'Residential Design',
-                'Commercial Spaces',
-                'Heritage Restoration',
-                'Biophilic Design',
-                'Wellness Centers',
-                'Smart Home Integration'
+  'Living Room Design',
+  'Modular Kitchen',
+  'Bedroom Interiors',
+  'Furniture & Decor',
+  'Office Spaces',
+  'Restaurants & Hotels'
               ].map((service) => (
                 <div
                   key={service}
@@ -149,7 +149,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-muted-foreground">
-                  <p>prakruti.salesteam@gmail.com</p>
+                  <p>contact@prakrutiinteriors.com</p>
                 </div>
               </div>
             </div>

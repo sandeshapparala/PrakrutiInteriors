@@ -11,7 +11,8 @@ import {
   Sparkles,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  User
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -147,11 +148,11 @@ export default function AboutPage() {
             >
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-primary">1000+</div>
+                  <div className="text-2xl font-bold text-primary">300+</div>
                   <div className="text-xs text-gray-600">Projects</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-accent">15+</div>
+                  <div className="text-2xl font-bold text-accent">25+</div>
                   <div className="text-xs text-gray-600">Years</div>
                 </div>
                 <div>
@@ -319,15 +320,15 @@ export default function AboutPage() {
                 transition={{ delay: 0.4, duration: 0.6 }}
               >
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Founded with a vision to transform spaces while preserving our environment, Prakruti Interiors began as a small dream to create interiors that tell stories. Our founder&apos;s deep connection with nature and spirituality led to the birth of a design philosophy that marries sustainability with sophistication.
-                </p>
-                
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Over the years, we&apos;ve evolved from a passionate startup to a trusted name in eco-friendly interior design. Every project we undertake is infused with our core belief: beautiful spaces should enhance lives while respecting the planet.
+                  Founded by a visionary expert with decades of hands-on experience, Prakruti Interiors has grown into a one-stop destination for complete interior and exterior design and execution. Whether you seek high-end luxury or budget-friendly solutions, we deliver customized, hand-finished interiors tailored to your unique taste and lifestyle.
                 </p>
 
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Today, we&apos;re proud to have transformed over 1000+ spaces, each one a testament to our commitment to quality, sustainability, and the timeless beauty of nature-inspired design.
+                  From homes to commercial spaces, we prioritize your vision and collaborate closely to bring it to life—ensuring a seamless fusion of style, functionality, and long-lasting protection. Our team is committed to delivering superior craftsmanship, meticulous attention to detail, and end-to-end service under one roof.
+                </p>
+
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Choose Prakruti Interiors for the perfect blend of craftsmanship, innovation, and trust—because your space deserves nothing less.
                 </p>
               </motion.div>
 
@@ -342,15 +343,15 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3">
                   <Calendar className="w-6 h-6 text-primary" />
                   <div>
-                    <div className="font-semibold text-gray-900">2009</div>
+                    <div className="font-semibold text-gray-900">2019</div>
                     <div className="text-sm text-gray-600">Founded</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Award className="w-6 h-6 text-accent" />
+                  <User className="w-6 h-6 text-accent" />
                   <div>
-                    <div className="font-semibold text-gray-900">50+</div>
-                    <div className="text-sm text-gray-600">Awards</div>
+                    <div className="font-semibold text-gray-900">300+</div>
+                    <div className="text-sm text-gray-600">Happy Clients</div>
                   </div>
                 </div>
               </motion.div>
@@ -377,7 +378,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <div className="text-sm font-semibold">Our Design Journey</div>
-                    <div className="text-xs opacity-80">15+ Years of Excellence</div>
+                    <div className="text-xs opacity-80">25+ Years of Excellence</div>
                   </div>
                 </div>
                 
@@ -606,8 +607,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <Award className="w-4 h-4 text-primary" />
-              <span className="text-primary text-sm font-medium tracking-wide">OUR ACHIEVEMENTS</span>
+              <User className="w-4 h-4 text-primary" />
+              <span className="text-primary text-sm font-medium tracking-wide">OUR CLIENTS</span>
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -623,24 +624,24 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                number: "1000+",
+                number: "300+",
                 label: "Projects Delivered",
                 description: "Completed successfully",
                 icon: Home,
                 color: "primary"
               },
               {
-                number: "15+",
+                number: "25+",
                 label: "Years of Excellence",
                 description: "Industry experience",
                 icon: Calendar,
                 color: "accent"
               },
               {
-                number: "50+",
-                label: "Industry Awards",
-                description: "Recognition received",
-                icon: Award,
+                number: "300+",
+                label: "Happy Clients",
+                description: "Across India",
+                icon: User,
                 color: "primary"
               },
               {
@@ -942,11 +943,11 @@ export default function AboutPage() {
                   transition={{ delay: 1.2, duration: 0.6 }}
                 >
                   <div>
-                    <div className="text-2xl font-bold text-white">1000+</div>
+                    <div className="text-2xl font-bold text-white">300+</div>
                     <div className="text-xs text-white/60">Happy Clients</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-white">15+</div>
+                    <div className="text-2xl font-bold text-white">25+</div>
                     <div className="text-xs text-white/60">Years Experience</div>
                   </div>
                   <div>
@@ -1005,13 +1006,16 @@ export default function AboutPage() {
                 <span className="font-medium">contact@prakrutiinteriors.com</span>
               </motion.a>
               
-              <motion.div
-                className="flex items-center justify-center gap-3 p-4 bg-white/5 rounded-2xl backdrop-blur-sm"
+              <motion.a
+                href="https://maps.app.goo.gl/cGhVTF8eH8K43ivKA?g_st=ac"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 p-4 bg-white/5 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group"
                 whileHover={{ scale: 1.02 }}
               >
                 <MapPin className="w-5 h-5 text-primary" />
                 <span className="font-medium">Vijayawada, India</span>
-              </motion.div>
+              </motion.a>
             </div>
           </motion.div>
         </div>

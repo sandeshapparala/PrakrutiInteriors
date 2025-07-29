@@ -138,7 +138,7 @@ export default function ContactContainer() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center p-4 bg-white rounded-2xl shadow-sm border border-orange-100">
-                  <div className="text-2xl font-bold text-orange-600 mb-1">500+</div>
+                  <div className="text-2xl font-bold text-orange-600 mb-1">300+</div>
                   <div className="text-sm text-gray-600">Projects Completed</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-2xl shadow-sm border border-orange-100">
@@ -161,44 +161,53 @@ export default function ContactContainer() {
                 </h3>
                 
                 <div className="space-y-6">
-                  <motion.div 
-                    className="flex items-center p-4 bg-orange-50 rounded-2xl border border-orange-100 hover:shadow-md transition-all cursor-pointer"
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center mr-4">
-                      <Phone className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Call Us</div>
-                      <div className="text-orange-600 font-medium">+91 88861 48866</div>
-                    </div>
-                  </motion.div>
 
-                  <motion.div 
-                    className="flex items-center p-4 bg-emerald-50 rounded-2xl border border-emerald-100 hover:shadow-md transition-all cursor-pointer"
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mr-4">
-                      <Mail className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Email Us</div>
-                      <div className="text-emerald-600 font-medium">prakruti.salesteam@gmail.com</div>
-                    </div>
-                  </motion.div>
+                  <Link href="tel:+918886148866" passHref legacyBehavior>
+                    <motion.a
+                      className="flex items-center p-4 bg-orange-50 rounded-2xl border border-orange-100 hover:shadow-md transition-all cursor-pointer"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center mr-4">
+                        <Phone className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900">Call Us</div>
+                        <div className="text-orange-600 font-medium">+91 88861 48866</div>
+                      </div>
+                    </motion.a>
+                  </Link>
 
-                  <motion.div 
-                    className="flex items-center p-4 bg-amber-50 rounded-2xl border border-amber-100 hover:shadow-md transition-all cursor-pointer"
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mr-4">
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Visit Us</div>
-                      <div className="text-amber-600 font-medium">MG Road, near bandar lakulu bus stop, Vijayawada</div>
-                    </div>
-                  </motion.div>
+
+                  <Link href="mailto:contact@prakrutiinteriors.com" passHref legacyBehavior>
+                    <motion.a
+                      className="flex items-center p-4 bg-emerald-50 rounded-2xl border border-emerald-100 hover:shadow-md transition-all cursor-pointer"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mr-4">
+                        <Mail className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900">Email Us</div>
+                        <div className="text-emerald-600 font-medium">contact@prakrutiinteriors.com</div>
+                      </div>
+                    </motion.a>
+                  </Link>
+
+
+                  <Link href="https://maps.app.goo.gl/cGhVTF8eH8K43ivKA?g_st=ac" target="_blank" rel="noopener noreferrer" passHref legacyBehavior>
+                    <motion.a
+                      className="flex items-center p-4 bg-amber-50 rounded-2xl border border-amber-100 hover:shadow-md transition-all cursor-pointer"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mr-4">
+                        <MapPin className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900">Visit Us</div>
+                        <div className="text-amber-600 font-medium">MG Road, near bandar lakulu bus stop, Vijayawada</div>
+                      </div>
+                    </motion.a>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -267,7 +276,7 @@ export default function ContactContainer() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/30 focus:border-orange-400 transition-all"
-                    placeholder="prakruti.salesteam@gmail.com"
+                    placeholder="contact@prakrutiinteriors.com"
                   />
                 </div>
               </div>

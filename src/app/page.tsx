@@ -19,25 +19,39 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Now with Sanity images */}
-      <HeroSection homePageData={homePageData} />
+      <div id="home">
+        <HeroSection homePageData={homePageData} />
+      </div>
 
       {/* Who We Are Section */}
-      <WhoWeAreSection />
+      <div id="about">
+        <WhoWeAreSection />
+      </div>
 
       {/* Services Section - Now with Sanity images */}
-      <ServicesSection homePageData={homePageData} />
+      <div id="services">
+        <ServicesSection homePageData={homePageData} />
+      </div>
 
       {/* Interior Expertise Section - Now with Sanity images */}
-      <InteriorExpertiseSection homePageData={homePageData} />
+      <div id="expertise">
+        <InteriorExpertiseSection homePageData={homePageData} />
+      </div>
 
       {/* Projects Section */}
-      <ProjectsSection projects={featuredProjects} />
+      <div id="projects">
+        <ProjectsSection projects={featuredProjects} />
+      </div>
 
       {/* Testimonials Section */}
-      <TestimonialsSection />
+      <div id="testimonials">
+        <TestimonialsSection />
+      </div>
 
       {/* CTA Section - Now with Sanity images */}
-      <CTASection homePageData={homePageData} />
+      <div id="contact">
+        <CTASection homePageData={homePageData} />
+      </div>
 
       {/* Footer */}
       <Footer />

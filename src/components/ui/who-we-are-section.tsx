@@ -133,11 +133,11 @@ export default function WhoWeAreSection() {
             >
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-primary">1000+</div>
+                  <div className="text-2xl font-bold text-primary">300+</div>
                   <div className="text-xs text-gray-600">Projects</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-accent">15+</div>
+                  <div className="text-2xl font-bold text-accent">25+</div>
                   <div className="text-xs text-gray-600">Years</div>
                 </div>
                 <div>
@@ -179,7 +179,7 @@ export default function WhoWeAreSection() {
               transition={{ delay: 0.6, duration: 0.6 }}
             >
               <p className="text-lg text-gray-600 leading-relaxed">
-                At Prakruti Interiors, we blend eco-friendly fibre wood, elegant Indian aesthetics, and modern functionality to create spaces that inspire peace, beauty, and purpose. With years of experience and a passion for sustainability, we design every interior to reflect not just your style, but the soul of your space.
+                At Prakruti Interiors, we blend termite-proof, pest-resistant, and water-proof craftsmanship with eco-friendly fibre wood, elegant Indian aesthetics, and modern functionality. With over 30 years of real-time experience and a passion for sustainable living, we create interiors that reflect not just your style, but the soul and protection of your space.
               </p>
             </motion.div>
 
